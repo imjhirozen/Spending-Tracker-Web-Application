@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" style="font-size: 1.2rem;" href="#">Home</a>
+            <a class="nav-link <?= urlIs('/') ? 'active' : '' ?>" aria-current="page" style="font-size: 1.2rem;" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="font-size: 1.2rem;" href="#">History</a>
+            <a class="nav-link <?= urlIs('/history') ? 'active' : '' ?>" style="font-size: 1.2rem;" href="/history">History</a>
           </li>
         </ul>
       </div>

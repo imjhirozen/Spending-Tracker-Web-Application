@@ -27,3 +27,9 @@ function config( $configName = 'database' )
     $config = require 'config.php';
     return $config[$configName];
 }
+
+function urlIs($value){
+    
+    return $_SERVER["REQUEST_URI"] == $value;
+
+}
