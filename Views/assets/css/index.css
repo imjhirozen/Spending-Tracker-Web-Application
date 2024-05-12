@@ -62,3 +62,20 @@ td {
     width: 100%;
 }
 
+/* HISTORY VIEW PAGE DATE */
+
+#history_date_search [type='date'] {
+    width: 110px;
+}
+
+
+/* LOGIN VIEW PAGE */
+
+#log_wrapper {
+
+    height: 100vh;
+    
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}

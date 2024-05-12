@@ -5,6 +5,7 @@ function dd ( $value )
 {
     echo "<prev>";
     var_dump($value);
+    echo "</prev>";
     die();
 
 }
@@ -30,6 +31,6 @@ function config( $configName = 'database' )
 
 function urlIs($value){
     
-    return $_SERVER["REQUEST_URI"] == $value;
+    return parse_url($_SERVER["REQUEST_URI"])['path'] == $value;
 
 }

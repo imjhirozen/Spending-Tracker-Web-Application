@@ -4,7 +4,6 @@ $conn = new Database( config() );
 
 $user_id = 100;
 
-
 try {
 
     $conn->query("  UPDATE history 
@@ -19,7 +18,11 @@ try {
     ]);
 
 }catch (Exception $e) {
+
     redirect('/');
+
 }finally {
+
     redirect('/');
+
 }
