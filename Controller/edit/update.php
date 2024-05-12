@@ -1,8 +1,8 @@
 <?php
 
-$conn = new Database( config() );
+isUserValid();
 
-$user_id = 100;
+$conn = new Database( config() );
 
 try {
 
@@ -14,7 +14,7 @@ try {
                     "product_name" => $_POST['product'],
                     "product_price" => $_POST['price'],
                     "id" => $_POST['id'],
-                    "user_id" => $user_id
+                    "user_id" => $_SESSION['user_id']
     ]);
 
 }catch (Exception $e) {

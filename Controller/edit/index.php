@@ -1,14 +1,14 @@
 <?php
 
-$conn = new Database( config() );
+isUserValid();
 
-$user_id = 100;
+$conn = new Database( config() );
 
 try {
 
     $result = $conn->query("SELECT * FROM history WHERE id = :id AND user_id = :user_id", [
         "id" => $_GET['id'],
-        "user_id" => $user_id
+        "user_id" => $_SESSION['user_id']
     ])->fetch();
 
 } catch (Exception $e) {

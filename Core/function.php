@@ -3,9 +3,9 @@
 
 function dd ( $value )
 {
-    echo "<prev>";
+    echo "<pre>";
     var_dump($value);
-    echo "</prev>";
+    echo "</pre>";
     die();
 
 }
@@ -32,5 +32,11 @@ function config( $configName = 'database' )
 function urlIs($value){
     
     return parse_url($_SERVER["REQUEST_URI"])['path'] == $value;
+
+}
+
+function isUserValid() {
+    
+    if( empty($_SESSION) ) redirect("/login");
 
 }

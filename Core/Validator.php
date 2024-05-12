@@ -2,6 +2,7 @@
 
 class Validator
 {
+
     public static function string( $value, $min = 1, $max = INF )
     {
         $value = trim(htmlspecialchars($value));
@@ -14,6 +15,21 @@ class Validator
     public static function number( $value )
     {
         return filter_var($value, FILTER_VALIDATE_INT);
+    }
+
+    public static function email( $value )
+    {
+        return filter_var($value, FILTER_VALIDATE_EMAIL);
+    }
+
+    public static function isUserExist( $value, $compare )
+    {
+        return $value === $compare;
+    }
+
+    public static function isPasswordExist( $user_password, $db_password )
+    {
+        return password_verify($user_password, $db_password);
     }
 
 }

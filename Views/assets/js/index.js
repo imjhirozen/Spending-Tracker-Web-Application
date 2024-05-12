@@ -17,9 +17,10 @@ if(uri['pathname'] == '/login')
 }
 
 if(uri['pathname'] == '/registration')
-    {
-        document.querySelector("#reg_link_login").addEventListener('click', e => {
-            e.preventDefault();
-            window.location.href = "/login";
-        });
-    }
+{
+    document.querySelector("#reg_link_login").addEventListener('click', e => {
+        e.preventDefault();
+        window.location.href = "/login";
+    });
+    
+}

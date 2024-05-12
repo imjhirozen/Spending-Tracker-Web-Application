@@ -32,4 +32,12 @@ class Database {
         return $this->statement->fetch();
     }
 
+    public function findOrFail( $redirect = '/login'){
+        $result = $this->fetch();
+    
+        if( !$result ) redirect( $redirect );
+
+        return $result;
+    }
+
 }

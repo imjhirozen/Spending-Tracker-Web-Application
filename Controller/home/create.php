@@ -1,5 +1,7 @@
 <?php
 
+isUserValid();
+
 $conn = new Database( config() );
 
 if( empty($_POST) || !isset($_POST)) redirect("/");
@@ -10,7 +12,7 @@ $conn->query("INSERT history ( product_type, product_name, product_price, date_c
     'product_name' => $_POST['product'],
     'product_price' => $_POST['price'],
     'date_created' => date("Y/m/d"),
-    'user_id' => 100
+    'user_id' => $_SESSION['user_id']
 ]);
 
 redirect("/");
