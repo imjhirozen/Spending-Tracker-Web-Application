@@ -10,9 +10,12 @@ function dd ( $value )
 
 }
 
+
+
 function redirect( $path )
 {
-    header("location: {$path}");
+    //$url_path = explode('/', parse_url($_SERVER['REQUEST_URI'])['path']);
+    header("location: /Spending-Tracker-Web-Application-main{$path}");
     die();
 }
 
@@ -39,4 +42,9 @@ function isUserValid() {
     
     if( empty($_SESSION) ) redirect("/login");
 
+}
+
+function redirectLink( $path )
+{
+    return "/Spending-Tracker-Web-Application-main/{$path}";
 }

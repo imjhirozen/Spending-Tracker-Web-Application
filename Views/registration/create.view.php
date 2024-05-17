@@ -1,7 +1,7 @@
 <?php require('Views/partials/head.php'); ?>
 
 <main id="log_wrapper">
-    <form action="/registration" method="POST">
+    <form action="<?= redirectLink("registration") ?>" method="POST">
         <div class="container rounded p-4" style="min-width: 360px; border: 1px solid white;">
             <div class="mb-4">
                 <h1 class="text-center">Register</h1>
