@@ -1,5 +1,5 @@
 <?php
-$xammp = "/Spending-Tracker-Web-Application-main";
+$xammp = "/Spending-Tracker-Web-Application/index.php";
 
 
 $router->get($xammp.'/', 'home/index.php');
@@ -20,3 +20,4 @@ $router->get($xammp.'/logout', 'session/destroy.php');
 
 $router->get($xammp.'/registration', 'registration/index.php');
 $router->post($xammp.'/registration', 'registration/store.php');
+

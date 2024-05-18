@@ -12,6 +12,11 @@ class Router {
         ];
     }
 
+    public function getRoutes()
+    {
+        return $this->routes;
+    }
+
     public function get ( $uri, $controller )
     {
         return $this->add( "GET", $uri, $controller );
@@ -35,5 +40,8 @@ class Router {
                 return require "Controller/" . $route['controller'];
             }
         }
+
+        header("location: /Spending-Tracker-Web-Application/index.php/login");
     }
+
 }

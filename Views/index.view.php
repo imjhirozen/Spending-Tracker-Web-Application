@@ -6,7 +6,7 @@
     <div id="wrapper" class="row">
         <div id="action_container" class="row-lg">
 
-            <form id="input_container" action="/" method="POST" class="needs-validation">
+            <form id="input_container" action="<?= redirectLink("") ?>" method="POST" class="needs-validation">
                 <div class="input-group mb-3">
                     <select name="type" class="form-select form-select-sm" aria-label="Selection" required>
                         <option selected disabled value="">Choose...</option>
@@ -54,9 +54,9 @@
                                     Action
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/edit?id=<?= htmlspecialchars($item['id']) ?>">Edit</a></li>
+                                    <li><a class="dropdown-item" href="<?= redirectLink("edit") ?>?id=<?= htmlspecialchars($item['id']) ?>">Edit</a></li>
                                     <li>
-                                        <form action="/" method="POST">
+                                        <form action="<?= redirectLink("") ?>" method="POST">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="id" value="<?= htmlspecialchars($item['id']) ?>">
                                             <input type="submit" class="dropdown-item" value="Delete">
@@ -78,5 +78,5 @@
     </div>
 </main>
 
-
+<script type="module" src="../Views/assets/js/index.js"></script>
 <?php require('partials/footer.php'); ?>

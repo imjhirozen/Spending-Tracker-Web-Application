@@ -13,11 +13,11 @@ try {
 
 } catch (Exception $e) {
 
-    redirect('/');
+    errorPage(401, "Unauthorized");
 
 }
 
-if(empty($result)) redirect('/');
+if(empty($result)) errorPage(401, "Unauthorized");;
 
 view("edit.view.php", [
     "value" => $result

@@ -16,10 +16,11 @@
             </div>
             <div class="row g-2 mt-4">
                 <button class="btn btn-primary" type="submit">Log in</button>
-                <button class="btn btn-primary" id="login_link_reg" >Sign Up</button>
+                <button class="btn btn-primary" id="login_link_reg" type="button">Sign Up</button>
             </div>
         </div>
     </form>
 </main>
 
+<script type="module" src="../Views/assets/js/index.js"></script>
 <?php require('Views/partials/footer.php'); ?>

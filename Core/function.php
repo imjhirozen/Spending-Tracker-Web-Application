@@ -10,12 +10,9 @@ function dd ( $value )
 
 }
 
-
-
 function redirect( $path )
 {
-    //$url_path = explode('/', parse_url($_SERVER['REQUEST_URI'])['path']);
-    header("location: /Spending-Tracker-Web-Application-main{$path}");
+    header("location: /Spending-Tracker-Web-Application/index.php{$path}");
     die();
 }
 
@@ -46,5 +43,17 @@ function isUserValid() {
 
 function redirectLink( $path )
 {
-    return "/Spending-Tracker-Web-Application-main/{$path}";
+    return "/Spending-Tracker-Web-Application/index.php/{$path}";
+}
+
+
+function errorPage( $code, $text )
+{
+    view("error/404.view.php", [
+        "error" => $code,
+        "description" => $text,
+        "header" => "location: /Spending-Tracker-Web-Application/index.php"
+    ]);
+
+    ;
 }

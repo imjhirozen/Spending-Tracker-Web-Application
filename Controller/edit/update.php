@@ -19,7 +19,7 @@ try {
 
 }catch (Exception $e) {
 
-    redirect('/');
+    errorPage(401, "Unauthorized");
 
 }finally {
 

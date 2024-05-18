@@ -4,7 +4,7 @@
 
 <main>
     <div id="wrapper" class="container">
-        <form id="form_edit" action="/edit" method="POST" class="p-4 rounded">
+        <form id="form_edit" action="<?= redirectLink("edit") ?>" method="POST" class="p-4 rounded">
             <input type="hidden" name="id" value="<?= $value['id'] ?>">
             <div class="mb-4">
                 <h1 class="text-center">EDIT</h1>
@@ -31,5 +31,5 @@
     </div>
 </main>
 
-
+<script type="module" src="../Views/assets/js/index.js"></script>
 <?php require('partials/footer.php'); ?>

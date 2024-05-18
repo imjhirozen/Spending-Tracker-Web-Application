@@ -3,7 +3,7 @@
 
 <main>
     <div class="container my-5">
-        <form id="history_date_search" action="/history" method="GET">
+        <form id="history_date_search" action="<?= redirectLink("history") ?>" method="GET">
             <input type="date" name="past">
             <input type="date" name="present" value="<?php echo date("Y-m-d");?>">
             <input type="submit" value="Submit" class="btn btn-primary">
@@ -33,5 +33,5 @@
         </table>
     </div>
 </main>
-
+<script type="module" src="../Views/assets/js/index.js"></script>
 <?php require('partials/footer.php'); ?>
