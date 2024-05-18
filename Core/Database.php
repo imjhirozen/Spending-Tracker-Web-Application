@@ -6,11 +6,19 @@ class Database {
 
     public function __construct( $config, $username = "root", $password = "password")
     {
-        $dns = 'mysql:' . http_build_query( $config, '', ';' );
+        try{
 
-        $this->conn = new PDO( $dns, $username, $password, [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-        ]);
+            $dns = 'mysql:' . http_build_query( $config, '', ';' );
+
+            $this->conn = new PDO( $dns, $username, $password, [
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            ]);
+    
+        }catch (Exception $e)
+        {
+            errorPage(404, "DATABASE NOT FOUND!!");
+        }
+        
     }
 
     public function query( $statement, $param = [])
