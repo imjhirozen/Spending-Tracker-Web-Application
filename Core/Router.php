@@ -41,7 +41,7 @@ class Router {
             }
         }
 
-        header("location: /Spending-Tracker-Web-Application/index.php/login");
+        header("location: /Spending-Tracker-Web-Application{$xampp_index}/login");
     }
 
 }

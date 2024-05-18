@@ -1,5 +1,6 @@
 <?php
 
+$defaultUrl = "/Spending-Tracker-Web-Application" . $GLOBALS['xampp_index'];
 
 function dd ( $value )
 {
@@ -12,7 +13,7 @@ function dd ( $value )
 
 function redirect( $path )
 {
-    header("location: /Spending-Tracker-Web-Application/index.php{$path}");
+    header("location: {$GLOBALS['defaultUrl']}{$path}");
     die();
 }
 
@@ -43,7 +44,7 @@ function isUserValid() {
 
 function redirectLink( $path )
 {
-    return "/Spending-Tracker-Web-Application/index.php/{$path}";
+    echo $GLOBALS['defaultUrl'] . "/" . $path;
 }
 
 
@@ -52,7 +53,7 @@ function errorPage( $code, $text )
     view("error/404.view.php", [
         "error" => $code,
         "description" => $text,
-        "header" => "location: /Spending-Tracker-Web-Application/index.php"
+        "header" => $GLOBALS['defaultUrl']
     ]);
 
     ;

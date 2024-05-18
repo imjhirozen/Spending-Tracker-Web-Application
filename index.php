@@ -2,6 +2,10 @@
 
 session_start();
 
+$xampp_index = "index.php";
+
+if($_SERVER['SERVER_PORT'] == 8080) $xampp_index = "";
+
 require 'Core/Router.php';
 require 'Core/Validator.php';
 require 'Core/function.php';
